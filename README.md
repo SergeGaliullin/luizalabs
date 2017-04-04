@@ -10,7 +10,7 @@ Optional:
 5. Create superuser to access admin page (python manage.py createsuperuser)
 
 # URLs
-http://localhost:8000/employee/ # list of employees
-http://localhost:8000/employee/add # add an employee
-http://localhost:8000/employee/delete/1 # delete employee with id 1
-http://localhost:8000/admin # admin page
+1. http://localhost:8000/employee/ - list of employees
+2. http://localhost:8000/employee/add - add an employee
+3. http://localhost:8000/employee/delete/1 - delete employee with id 1
+4. http://localhost:8000/admin - admin page
