@@ -4,17 +4,17 @@ from .models import Employee
 from .serializers import EmployeeSerializer
 
 
-class EmployeeList(mixins.CreateModelMixin, mixins.ListModelMixin,
-                     mixins.DestroyModelMixin, generics.GenericAPIView):
+class EmployeeList(generics.ListAPIView):
     queryset = Employee.objects.all()
     serializer_class = EmployeeSerializer
 
-    def get(self, request, *args, **kwargs):
-        return self.list(request, *args, **kwargs)
 
-    def post(self, request, *args, **kwargs):
-        return self.create(request, *args, **kwargs)
+class EmployeeAdd(generics.CreateAPIView):
+    queryset = Employee.objects.all()
+    serializer_class = EmployeeSerializer
 
-    def delete(self, request, *args, **kwargs):
-        return self.delete(request, *args, **kwargs)
+
+class EmployeeDelete(generics.DestroyAPIView):
+    queryset = Employee.objects.all()
+    serializer_class = EmployeeSerializer
     
