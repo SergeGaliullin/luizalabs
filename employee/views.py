@@ -1,11 +1,12 @@
 from rest_framework import mixins
 from rest_framework import generics
 from .models import Employee
+from .serializers import EmployeeSerializer
 
 
 class EmployeeList(mixins.CreateModelMixin, mixins.ListModelMixin,
                      mixins.DestroyModelMixin, generics.GenericAPIView):
-    queryset = Employee.object.all()
+    queryset = Employee.objects.all()
     serializer_class = EmployeeSerializer
 
     def get(self, request, *args, **kwargs):
