@@ -6,7 +6,7 @@ Desafio!
 2. Create virtual environment with python 3.5 (virtualenv -p python3.5 venv) and activate it (cd venv && source bin/activate)
 3. Install the requirements (pip install -r requirements.txt)
 4. Run the project (python manage.py runserver)
-Optional:
+### Optional:
 5. Create superuser to access admin page (python manage.py createsuperuser)
 
 # URLs
